@@ -1,0 +1,29 @@
+{
+ "meta": {
+  "type": "letter",
+  "code": "GEN-2026",
+  "kind": "Letter",
+  "status": "final",
+  "date": "2026-11-10",
+  "ref_no": "",
+  "title": {"lo": "ໜັງສືສະເໜີ", "en": "Proposal letter", "zh": "建议函"},
+  "to": {"lo": "ທ່ານຜູ້ອຳນວຍການ ທ່າເຮືອ ...", "en": "The Director, ... Port", "zh": "……港务局局长"},
+  "subject": {"lo": "ການສະເໜີສະໜັບສະໜູນທຶນກໍ່ສ້າງເຮືອຂ້າມຟາກລຳໃໝ່", "en": "Proposal to fund the construction of a new ferry", "zh": "关于出资建造新渡轮的建议"},
+  "attention": {"lo": "ບົດບັນທຶກການປະຊຸມ ວັນທີ 1 ພະຈິກ 2026", "en": "Minutes of the meeting of 1 November 2026", "zh": "2026年11月1日会议纪要"},
+  "signer": {
+   "closing": {"lo": "ຮຽນມາດ້ວຍຄວາມນັບຖື,", "en": "Yours sincerely,", "zh": "此致 敬礼"},
+   "name": {"lo": "ທ່ານ ...", "en": "Mr/Ms ...", "zh": "……先生/女士"},
+   "position": {"lo": "ຜູ້ອຳນວຍການ ແດນສະຫວັນ", "en": "Director, Dansavanh", "zh": "丹沙湾 总经理"}
+  }
+ },
+ "sections": [
+  {"title": "", "blocks": [
+   {"type": "p", "text": {"lo": "ອີງຕາມການປຶກສາຫາລືລະຫວ່າງ ແດນສະຫວັນ (DSV) ແລະ ທ່າເຮືອ ..., ບໍລິສັດຂໍສະເໜີ ...", "en": "Further to the discussions between Dansavanh (DSV) and ... Port, the company proposes ...", "zh": "根据丹沙湾（DSV）与……港方的磋商，本公司建议……"}},
+   {"type": "numbered", "items": [
+    {"lo": "ເງື່ອນໄຂທີ 1 ...", "en": "Condition 1 ...", "zh": "条件一……"},
+    {"lo": "ເງື່ອນໄຂທີ 2 ...", "en": "Condition 2 ...", "zh": "条件二……"}
+   ]},
+   {"type": "p", "text": {"lo": "ຈຶ່ງຮຽນມາເພື່ອພິຈາລະນາ ແລະ ຫວັງຢ່າງຍິ່ງວ່າຈະໄດ້ຮັບການຕອບຮັບດ້ວຍດີ.", "en": "We submit this for your consideration and look forward to your favourable reply.", "zh": "特此函达，敬请审阅并盼复。"}}
+  ]}
+ ]
+}

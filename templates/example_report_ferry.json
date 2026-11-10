@@ -1,0 +1,1312 @@
+{
+ "meta": {
+  "type": "report",
+  "code": "FERRY-2026",
+  "kind": "Funding Conditions",
+  "status": "draft",
+  "date": "2026-11-07",
+  "title": {
+   "lo": "ບົດລາຍງານເງື່ອນໄຂການສະໜັບສະໜູນທຶນ – ໂຄງການກໍ່ສ້າງເຮືອຂ້າມຟາກລຳໃໝ່",
+   "en": "Funding Conditions Report – New Ferry Construction Project",
+   "zh": "出资条件报告——新渡轮建造项目"
+  },
+  "subtitle": {
+   "lo": "ສະຫຼຸບ · ການວິເຄາະ · ແຜນດຳເນີນງານ",
+   "en": "Conclusion · Analysis · Plan",
+   "zh": "结论 · 分析 · 计划"
+  },
+  "info": [
+   [
+    {
+     "lo": "ໂຄງການ",
+     "en": "Project",
+     "zh": "项目"
+    },
+    {
+     "lo": "ເຮືອຂ້າມຟາກລຳໃໝ່ (ໂຕເຮືອ ແລະ ເຄື່ອງຈັກ)",
+     "en": "New ferry (hull and engine)",
+     "zh": "新渡轮（船体与发动机）"
+    }
+   ],
+   [
+    {
+     "lo": "ວັນທີ",
+     "en": "Date",
+     "zh": "日期"
+    },
+    {
+     "lo": "7 ພະຈິກ 2026",
+     "en": "7 November 2026",
+     "zh": "2026年11月7日"
+    }
+   ],
+   [
+    {
+     "lo": "ຜູ້ໃຫ້ທຶນ",
+     "en": "Funder",
+     "zh": "出资方"
+    },
+    {
+     "lo": "ແດນສະຫວັນ (DSV)",
+     "en": "Dansavanh (DSV)",
+     "zh": "丹沙万（DSV）"
+    }
+   ],
+   [
+    {
+     "lo": "ສະຖານະ",
+     "en": "Status",
+     "zh": "状态"
+    },
+    {
+     "lo": "ຮ່າງ",
+     "en": "Draft",
+     "zh": "草稿"
+    }
+   ],
+   [
+    {
+     "lo": "ຜູ້ຮັບຜິດຊອບກໍ່ສ້າງ",
+     "en": "Builder",
+     "zh": "建造方"
+    },
+    {
+     "lo": "ທ່າເຮືອ",
+     "en": "The port",
+     "zh": "港方"
+    }
+   ],
+   [
+    {
+     "lo": "ຜູ້ຮັບ",
+     "en": "Prepared for",
+     "zh": "呈交"
+    },
+    {
+     "lo": "ຄະນະບໍລິຫານ",
+     "en": "Management",
+     "zh": "管理层"
+    }
+   ]
+  ],
+  "project": {
+   "lo": "ເຮືອຂ້າມຟາກລຳໃໝ່ (ໂຕເຮືອ ແລະ ເຄື່ອງຈັກ)",
+   "en": "New ferry (hull and engine)",
+   "zh": "新渡轮（船体与发动机）"
+  }
+ },
+ "sections": [
+  {
+   "title": {
+    "lo": "ສະຫຼຸບສຳລັບຜູ້ບໍລິຫານ",
+    "en": "Executive Summary",
+    "zh": "执行摘要"
+   },
+   "blocks": [
+    {
+     "type": "p",
+     "text": {
+      "lo": "DSV ສະໜອງທຶນເພື່ອກໍ່ສ້າງເຮືອຂ້າມຟາກລຳໃໝ່ ພາຍໃຕ້ 3 ເງື່ອນໄຂ: (1) ງົບປະມານທີ່ທ່າເຮືອສະເໜີ ແລະ DSV ເຫັນດີ; (2) ເງື່ອນໄຂສິດການຜ່ານທີ່ໃຫ້ DSV ໄດ້ຮັບຜົນປະໂຫຍດສູງສຸດ; (3) ການເບີກຈ່າຍທຶນເປັນງວດຕາມຄວາມຄືບໜ້າທີ່ກວດຮັບແລ້ວ.",
+      "en": "DSV will fund the construction of a new ferry under three conditions: (1) the budget proposed by the port, which DSV accepts; (2) conditions for the right of passage that give DSV the highest benefit; (3) disbursement in installments tied to verified progress.",
+      "zh": "DSV出资建造新渡轮，附三项条件：（1）港方提出且DSV认可的预算；（2）使DSV收益最大化的通行权条件；（3）按经核验的进度分期拨付资金。"
+     }
+    },
+    {
+     "type": "table",
+     "columns": [
+      {
+       "lo": "ລາຍການ",
+       "en": "Item",
+       "zh": "项目"
+      },
+      {
+       "lo": "ຄ່າ",
+       "en": "Value",
+       "zh": "数值"
+      },
+      {
+       "lo": "ໝາຍເຫດ",
+       "en": "Note",
+       "zh": "备注"
+      }
+     ],
+     "rows": [
+      [
+       {
+        "lo": "ງົບໂຕເຮືອ ແລະ ເຄື່ອງຈັກ (ບາດ)",
+        "en": "Hull and engine budget (baht)",
+        "zh": "船体与发动机预算（泰铢）"
+       },
+       "500,000",
+       {
+        "lo": "ຕາມທີ່ທ່າເຮືອສະເໜີ",
+        "en": "As proposed by the port",
+        "zh": "港方提出"
+       }
+      ],
+      [
+       {
+        "lo": "ຈຳນວນງວດຈ່າຍ",
+        "en": "Number of installments",
+        "zh": "付款期数"
+       },
+       "3",
+       "150,000 / 200,000 / 150,000"
+      ],
+      [
+       {
+        "lo": "ມູນຄ່າສິດຜ່ານ ຕໍ່ປີ (ບາດ)",
+        "en": "Passage value per year (baht)",
+        "zh": "年通行权价值（泰铢）"
+       },
+       "–",
+       {
+        "lo": "ຄິດໄລ່ຕາມພາກ 2.2",
+        "en": "Calculated in section 2.2",
+        "zh": "见第2.2节测算"
+       }
+      ],
+      [
+       {
+        "lo": "ມູນຄ່າສິດຜ່ານຕະຫຼອດສັນຍາ (ບາດ)",
+        "en": "Passage value over the contract (baht)",
+        "zh": "合同期内通行权价值（泰铢）"
+       },
+       "–",
+       {
+        "lo": "5 ປີ",
+        "en": "5 years",
+        "zh": "5 年"
+       }
+      ],
+      [
+       {
+        "lo": "ສັດສ່ວນຕໍ່ເງິນທຶນ",
+        "en": "Share of DSV contribution recovered",
+        "zh": "占出资比例"
+       },
+       "–",
+       ""
+      ],
+      [
+       {
+        "lo": "ໄລຍະຄືນທຶນ (ປີ)",
+        "en": "Payback period (years)",
+        "zh": "回本年限（年）"
+       },
+       "–",
+       ""
+      ]
+     ],
+     "total_row": true,
+     "align": [
+      "l",
+      "r",
+      "l"
+     ]
+    },
+    {
+     "type": "p",
+     "text": {
+      "lo": "ຂໍ້ສະເໜີ: ຮັບງົບ 500,000 ບາດ ເມື່ອທ່າເຮືອສົ່ງ BOQ ແລະ ລາຄາຢືນຢັນ; ເຮັດສັນຍາສິດຜ່ານໄລຍະຍາວ ຕາມພາກ 2; ຈ່າຍ 3 ງວດ ຕາມພາກ 3.",
+      "en": "Recommendation: Accept the 500,000 baht budget once the port provides the BOQ and confirmed quotations; contract a long-term right of passage under section 2; pay in 3 installments under section 3.",
+      "zh": "建议： 在港方提供工程量清单和确认报价后接受500,000泰铢预算；按第2节签订长期通行权合同；按第3节分3期付款。"
+     }
+    }
+   ],
+   "numbered": false
+  },
+  {
+   "title": {
+    "lo": "ງົບປະມານທີ່ທ່າເຮືອສະເໜີ",
+    "en": "Budget Proposed by the Port",
+    "zh": "港方提出的预算"
+   },
+   "blocks": [
+    {
+     "type": "table",
+     "columns": [
+      "#",
+      {
+       "lo": "ລາຍການ",
+       "en": "Item",
+       "zh": "项目"
+      },
+      {
+       "lo": "ຈຳນວນ (ບາດ)",
+       "en": "Amount (baht)",
+       "zh": "金额（泰铢）"
+      },
+      {
+       "lo": "ໝາຍເຫດ",
+       "en": "Note",
+       "zh": "备注"
+      }
+     ],
+     "rows": [
+      [
+       "1.1",
+       {
+        "lo": "ໂຕເຮືອ",
+        "en": "Hull",
+        "zh": "船体"
+       },
+       "–",
+       {
+        "lo": "ທ່າເຮືອສົ່ງລາຍລະອຽດ (ພາກຜະໜວກ ຄ)",
+        "en": "Breakdown from the port (Annex C)",
+        "zh": "由港方提供明细（附录C）"
+       }
+      ],
+      [
+       "1.2",
+       {
+        "lo": "ເຄື່ອງຈັກ",
+        "en": "Engine",
+        "zh": "发动机"
+       },
+       "–",
+       {
+        "lo": "ຍີ່ຫໍ້, ກຳລັງ, ໃໝ່/ມືສອງ, ການຮັບປະກັນ",
+        "en": "Brand, power, new or used, warranty",
+        "zh": "品牌、功率、新旧、质保"
+       }
+      ],
+      [
+       "",
+       {
+        "lo": "ລວມ",
+        "en": "Total",
+        "zh": "合计"
+       },
+       "500,000",
+       ""
+      ]
+     ],
+     "total_row": true,
+     "align": [
+      "l",
+      "l",
+      "r",
+      "l"
+     ]
+    },
+    {
+     "type": "h",
+     "level": 3,
+     "text": {
+      "lo": "ເງື່ອນໄຂການຮັບງົບ",
+      "en": "Conditions for accepting the budget",
+      "zh": "接受预算的条件"
+     }
+    },
+    {
+     "type": "numbered",
+     "items": [
+      [
+       "1.3",
+       {
+        "lo": "ທ່າເຮືອສົ່ງ BOQ ແຍກໂຕເຮືອ/ເຄື່ອງຈັກ, ແບບເຮືອ ແລະ ໃບສະເໜີລາຄາ.",
+        "en": "The port provides a BOQ split into hull and engine, vessel drawings and quotations.",
+        "zh": "港方提供按船体/发动机分列的工程量清单、图纸和报价。"
+       }
+      ],
+      [
+       "1.4",
+       {
+        "lo": "500,000 ບາດ ເປັນລາຄາຄົງທີ່ ຫຼື ເພດານສູງສຸດ; ສ່ວນເກີນທ່າເຮືອຮັບຜິດຊອບ.",
+        "en": "The 500,000 baht is a lump sum or a hard cap; any overrun is borne by the port.",
+        "zh": "500,000泰铢为包干价或上限；超支由港方承担。"
+       }
+      ],
+      [
+       "1.5",
+       {
+        "lo": "ງົບນີ້ກວມສະເພາະໂຕເຮືອ ແລະ ເຄື່ອງຈັກ; ອຸປະກອນອື່ນ ເຊັ່ນ ລະບົບຄວາມປອດໄພ ຕ້ອງລະບຸຜູ້ຮັບຜິດຊອບໃຫ້ຊັດ.",
+        "en": "The budget covers hull and engine only; responsibility for other items, such as safety equipment, must be stated.",
+        "zh": "预算仅含船体与发动机；安全设备等其他项目的责任方须明确。"
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": {
+    "lo": "ເງື່ອນໄຂສິດການຜ່ານຂອງ DSV",
+    "en": "DSV Right-of-Passage Conditions",
+    "zh": "DSV通行权条件"
+   },
+   "blocks": [
+    {
+     "type": "h",
+     "level": 3,
+     "text": {
+      "lo": "2.1 ເງື່ອນໄຂທີ່ສະເໜີ",
+      "en": "2.1 Proposed conditions",
+      "zh": "2.1 建议条件"
+     }
+    },
+    {
+     "type": "table",
+     "columns": [
+      "#",
+      {
+       "lo": "ເງື່ອນໄຂ",
+       "en": "Condition",
+       "zh": "条件"
+      },
+      {
+       "lo": "ລາຍລະອຽດ",
+       "en": "Detail",
+       "zh": "具体内容"
+      },
+      {
+       "lo": "ລະດັບ",
+       "en": "Priority",
+       "zh": "优先级"
+      }
+     ],
+     "rows": [
+      [
+       "2.1.1",
+       {
+        "lo": "ສິດຜ່ານບູລິມະສິດ",
+        "en": "Priority passage",
+        "zh": "优先通行"
+       },
+       {
+        "lo": "ລົດຮັບສົ່ງ, ລົດຜູ້ບໍລິຫານ ແລະ ພະນັກງານ DSV ຂຶ້ນເຮືອກ່ອນ ແລະ ມີບ່ອນຮັບປະກັນ.",
+        "en": "DSV shuttles, executive cars and staff board first with guaranteed space.",
+        "zh": "DSV班车、高管用车和员工优先上船并保证舱位。"
+       },
+       {
+        "lo": "ຈຳເປັນ",
+        "en": "Required",
+        "zh": "必须"
+       }
+      ],
+      [
+       "2.1.2",
+       {
+        "lo": "ຄ່າທຳນຽມ",
+        "en": "Fare",
+        "zh": "票价"
+       },
+       {
+        "lo": "ຟຣີ ຫຼື ຫຼຸດລາຄາຕາມອັດຕາທີ່ຕົກລົງ ຈົນກວ່າຈະຄືນທຶນ; ອັດຕາຄົງທີ່ຕາມສັນຍາ (ພາກຜະໜວກ ຄ).",
+        "en": "Free, or discounted at an agreed rate until DSV recovers its contribution; rate fixed by contract (Annex C).",
+        "zh": "免费或按约定比例优惠，直至DSV收回出资；费率由合同固定（附录C）。"
+       },
+       {
+        "lo": "ຈຳເປັນ",
+        "en": "Required",
+        "zh": "必须"
+       }
+      ],
+      [
+       "2.1.3",
+       {
+        "lo": "ໄລຍະເວລາຂອງສິດ",
+        "en": "Duration of the right",
+        "zh": "权利期限"
+       },
+       {
+        "lo": "ຢ່າງໜ້ອຍເທົ່າໄລຍະສັນຍາ ຫຼື ຈົນກວ່າຈະຄືນທຶນ (ເອົາອັນທີ່ຍາວກວ່າ); ຜູກມັດເຈົ້າຂອງເຮືອຄົນໃໝ່.",
+        "en": "At least the contract period or until payback, whichever is longer; binding on any new ship owner.",
+        "zh": "不少于合同期限或至回本（以较长者为准）；对新船东有约束力。"
+       },
+       {
+        "lo": "ຈຳເປັນ",
+        "en": "Required",
+        "zh": "必须"
+       }
+      ],
+      [
+       "2.1.4",
+       {
+        "lo": "ຮອບເດີນເຮືອ",
+        "en": "Service schedule",
+        "zh": "航班安排"
+       },
+       {
+        "lo": "ຈຳນວນຖ້ຽວຂັ້ນຕ່ຳຕໍ່ມື້, ເພີ່ມຮອບພິເສດເມື່ອຮ້ອງຂໍ, ເດີນເຮືອໄດ້ໃນລະດັບນ້ຳທີ່ກຳນົດ.",
+        "en": "Minimum daily trips, extra trips on request, operation within agreed water levels.",
+        "zh": "每日最低班次，按需加班，在约定水位内运营。"
+       },
+       {
+        "lo": "ຄວນມີ",
+        "en": "Recommended",
+        "zh": "建议"
+       }
+      ],
+      [
+       "2.1.5",
+       {
+        "lo": "ບົດບາດໃນໂຄງການ",
+        "en": "Project role",
+        "zh": "项目地位"
+       },
+       {
+        "lo": "ປ້າຍ DSV, ຜູ້ແທນໃນຄະນະກວດຄວາມຄືບໜ້າ, ສິດເຂົ້າກວດອູ່ຕໍ່ເຮືອ.",
+        "en": "DSV signage, a representative on the progress committee, right to inspect the yard.",
+        "zh": "DSV标识、进度委员会代表、船坞检查权。"
+       },
+       {
+        "lo": "ຄວນມີ",
+        "en": "Recommended",
+        "zh": "建议"
+       }
+      ],
+      [
+       "2.1.6",
+       {
+        "lo": "ຄວາມປອດໄພ ແລະ ບຳລຸງຮັກສາ",
+        "en": "Safety and maintenance",
+        "zh": "安全与维护"
+       },
+       {
+        "lo": "ທ່າເຮືອຮັບຜິດຊອບການບຳລຸງ, ປະກັນໄພ, ໃບຢັ້ງຢືນຄວາມປອດໄພ ແລະ ຄວາມພ້ອມໃຊ້ງານ.",
+        "en": "The port is responsible for maintenance, insurance, safety certificates and availability.",
+        "zh": "港方负责维护、保险、安全证书和可用性。"
+       },
+       {
+        "lo": "ຈຳເປັນ",
+        "en": "Required",
+        "zh": "必须"
+       }
+      ],
+      [
+       "2.1.7",
+       {
+        "lo": "ການລະເມີດ ແລະ ການຄືນເງິນ",
+        "en": "Breach and refund",
+        "zh": "违约与退款"
+       },
+       {
+        "lo": "ສົ່ງມອບຊ້າ ຫຼື ລະເມີດສິດ: ຄ່າປັບ, ຫຼຸດຄ່າທຳນຽມ ຫຼື ຄືນເງິນງວດທີ່ຈ່າຍແລ້ວ.",
+        "en": "Late delivery or breach of rights leads to a penalty, fare credit or refund of paid installments.",
+        "zh": "逾期交付或侵权：罚款、票价抵扣或退还已付款项。"
+       },
+       {
+        "lo": "ຈຳເປັນ",
+        "en": "Required",
+        "zh": "必须"
+       }
+      ],
+      [
+       "2.1.8",
+       {
+        "lo": "ກຳມະສິດ / ຫຼັກປະກັນ",
+        "en": "Ownership / security",
+        "zh": "所有权/担保"
+       },
+       {
+        "lo": "ພິຈາລະນາເປັນເຈົ້າຂອງຮ່ວມ ຫຼື ຈຳນອງເຮືອຈົນກວ່າຈະຄືນທຶນ.",
+        "en": "Consider co-ownership or a lien on the ship until payback.",
+        "zh": "考虑共同所有或以船舶抵押，直至回本。"
+       },
+       {
+        "lo": "ເສີມ",
+        "en": "Optional",
+        "zh": "可选"
+       }
+      ]
+     ]
+    },
+    {
+     "type": "h",
+     "level": 3,
+     "text": {
+      "lo": "2.2 ການຄິດໄລ່ມູນຄ່າສິດການຜ່ານ",
+      "en": "2.2 Passage value calculation",
+      "zh": "2.2 通行权价值测算"
+     }
+    },
+    {
+     "type": "callout",
+     "text": {
+      "lo": "ປ່ຽນຄ່າໃນຊ່ອງເພື່ອຄິດໄລ່ໃໝ່; ຜົນອັບເດດທັນທີ.",
+      "en": "Edit the values to recalculate; results update immediately.",
+      "zh": "修改数值即可重新计算，结果即时更新。"
+     }
+    },
+    {
+     "type": "table",
+     "columns": [
+      "#",
+      {
+       "lo": "ຄ່າທີ່ໃຊ້ຄິດໄລ່",
+       "en": "Basis of calculation",
+       "zh": "计算依据"
+      },
+      {
+       "lo": "ຄ່າ",
+       "en": "Value",
+       "zh": "数值"
+      }
+     ],
+     "rows": [
+      [
+       "a",
+       {
+        "lo": "ຖ້ຽວລົດຮັບສົ່ງ ຕໍ່ມື້",
+        "en": "Shuttle trips per day",
+        "zh": "班车每日趟数"
+       },
+       "4"
+      ],
+      [
+       "b",
+       {
+        "lo": "ລົດຜູ້ບໍລິຫານ ຕໍ່ມື້",
+        "en": "Executive cars per day",
+        "zh": "高管用车每日数量"
+       },
+       "2"
+      ],
+      [
+       "c",
+       {
+        "lo": "ລາຄາ ຕໍ່ຄັນ ຕໍ່ຖ້ຽວ",
+        "en": "Price per car per trip",
+        "zh": "每车每趟价格"
+       },
+       "30000"
+      ],
+      [
+       "d",
+       {
+        "lo": "ສະກຸນເງິນຂອງລາຄາ",
+        "en": "Currency of the price",
+        "zh": "价格币种"
+       },
+       "LAK"
+      ],
+      [
+       "e",
+       {
+        "lo": "ອັດຕາແລກປ່ຽນ (LAK ຕໍ່ 1 ບາດ)",
+        "en": "Exchange rate (LAK per 1 baht)",
+        "zh": "汇率（每1泰铢兑LAK）"
+       },
+       "683"
+      ],
+      [
+       "f",
+       {
+        "lo": "ວັນເດີນເຮືອ ຕໍ່ປີ",
+        "en": "Operating days per year",
+        "zh": "年运营天数"
+       },
+       "365"
+      ],
+      [
+       "g",
+       {
+        "lo": "ໄລຍະສັນຍາ (ປີ)",
+        "en": "Contract period (years)",
+        "zh": "合同期限（年）"
+       },
+       "5"
+      ],
+      [
+       "h",
+       {
+        "lo": "ເງິນທຶນຂອງ DSV (ບາດ)",
+        "en": "DSV contribution (baht)",
+        "zh": "DSV出资（泰铢）"
+       },
+       "500000"
+      ]
+     ]
+    },
+    {
+     "type": "formula",
+     "text": {
+      "lo": "ມູນຄ່າ/ປີ (ບາດ) = (a + b) × c ÷ e × f (ເມື່ອລາຄາເປັນ LAK)",
+      "en": "Value per year (baht) = (a + b) × c ÷ e × f (when the price is in LAK)",
+      "zh": "年价值（泰铢）=（a + b）× c ÷ e × f （价格为LAK时）"
+     }
+    },
+    {
+     "type": "table",
+     "columns": [
+      {
+       "lo": "ຜົນການຄິດໄລ່",
+       "en": "Result",
+       "zh": "测算结果"
+      },
+      {
+       "lo": "ຄ່າ",
+       "en": "Value",
+       "zh": "数值"
+      }
+     ],
+     "rows": [
+      [
+       {
+        "lo": "ມູນຄ່າສິດຜ່ານ ຕໍ່ປີ (ບາດ)",
+        "en": "Passage value per year (baht)",
+        "zh": "年通行权价值（泰铢）"
+       },
+       "–"
+      ],
+      [
+       {
+        "lo": "ມູນຄ່າຕະຫຼອດໄລຍະສັນຍາ (ບາດ)",
+        "en": "Value over the contract period (baht)",
+        "zh": "合同期内总价值（泰铢）"
+       },
+       "–"
+      ],
+      [
+       {
+        "lo": "ສັດສ່ວນຕໍ່ເງິນທຶນ",
+        "en": "Share of contribution recovered",
+        "zh": "占出资比例"
+       },
+       "–"
+      ],
+      [
+       {
+        "lo": "ໄລຍະຄືນທຶນ (ປີ)",
+        "en": "Payback period (years)",
+        "zh": "回本年限（年）"
+       },
+       "–"
+      ]
+     ],
+     "total_row": true,
+     "align": [
+      "l",
+      "r"
+     ]
+    },
+    {
+     "type": "callout",
+     "text": {
+      "lo": "ຮູບ 1. ມູນຄ່າສະສົມຂອງສິດການຜ່ານ ທຽບກັບເງິນທຶນ DSV. ລາກຈຸດໝາຍເພື່ອປ່ຽນໄລຍະສັນຍາ.",
+      "en": "Figure 1. Cumulative passage value against the DSV contribution. Drag the marker to change the contract period.",
+      "zh": "图1. 通行权累计价值与DSV出资对比。拖动标记可调整合同期限。"
+     }
+    },
+    {
+     "type": "h",
+     "level": 3,
+     "text": {
+      "lo": "2.3 ຄວາມອ່ອນໄຫວຕໍ່ຈຳນວນຖ້ຽວ",
+      "en": "2.3 Sensitivity to trips per day",
+      "zh": "2.3 班次敏感性分析"
+     }
+    },
+    {
+     "type": "callout",
+     "text": {
+      "lo": "ຮູບ 2. ເວລາທີ່ມູນຄ່າສິດຜ່ານເຖິງ 100% ຂອງເງິນທຶນ DSV (ລວມລົດຜູ້ບໍລິຫານ). ເວລາໃນພາບເຄື່ອນໄຫວເປັນສັດສ່ວນກັບຈຳນວນປີ.",
+      "en": "Figure 2. Time for the passage value to reach 100% of the DSV contribution (including executive cars). Animation time is proportional to years.",
+      "zh": "图2. 通行权价值达到DSV出资100%所需时间（含高管用车）。动画时长与年数成正比。"
+     }
+    },
+    {
+     "type": "table",
+     "columns": [
+      {
+       "lo": "ຖ້ຽວ/ມື້",
+       "en": "Trips per day",
+       "zh": "每日趟数"
+      },
+      {
+       "lo": "ປີຄືນທຶນ (ລົດຮັບສົ່ງຢ່າງດຽວ)",
+       "en": "Payback, years (shuttles only)",
+       "zh": "回本年限（仅班车）"
+      },
+      {
+       "lo": "ປີຄືນທຶນ (+ ລົດຜູ້ບໍລິຫານ)",
+       "en": "Payback, years (+ executive cars)",
+       "zh": "回本年限（含高管用车）"
+      }
+     ],
+     "rows": [],
+     "align": [
+      "l",
+      "r",
+      "r"
+     ]
+    }
+   ]
+  },
+  {
+   "title": {
+    "lo": "ການເບີກຈ່າຍທຶນເປັນງວດ",
+    "en": "Disbursement in Installments",
+    "zh": "分期拨付资金"
+   },
+   "blocks": [
+    {
+     "type": "h",
+     "level": 3,
+     "text": {
+      "lo": "3.1 ຕາຕະລາງງວດຈ່າຍ",
+      "en": "3.1 Installment schedule",
+      "zh": "3.1 付款计划"
+     }
+    },
+    {
+     "type": "callout",
+     "text": {
+      "lo": "ກົດແຖວເພື່ອເບິ່ງເອກະສານຢັນ. ງວດຕໍ່ໄປຈ່າຍໄດ້ເມື່ອງວດກ່ອນໄດ້ຮັບອະນຸມັດ.",
+      "en": "Click a row to see the verification evidence. The next installment is released only after the previous one is approved.",
+      "zh": "点击行查看核验证据。上一期获批后方可拨付下一期。"
+     }
+    },
+    {
+     "type": "callout",
+     "text": {
+      "lo": "ຮູບ 3. ເງິນຖືກປ່ອຍເປັນ 3 ງວດ; ແຕ່ລະດ່ານຕ້ອງຜ່ານການກວດຮັບກ່ອນໄປຕໍ່.",
+      "en": "Figure 3. Funds are released in 3 stages; each gate must pass inspection before the next.",
+      "zh": "图3. 资金分3期拨付；每一关须通过验收方可进入下一期。"
+     }
+    },
+    {
+     "type": "table",
+     "columns": [
+      "#",
+      {
+       "lo": "ຂັ້ນຕອນ",
+       "en": "Milestone",
+       "zh": "里程碑"
+      },
+      "%",
+      {
+       "lo": "ຈຳນວນ (ບາດ)",
+       "en": "Amount (baht)",
+       "zh": "金额（泰铢）"
+      },
+      {
+       "lo": "ປ່ອຍສະສົມ",
+       "en": "Cumulative",
+       "zh": "累计拨付"
+      },
+      {
+       "lo": "ຄວາມຄືບໜ້າ",
+       "en": "Progress",
+       "zh": "进度"
+      }
+     ],
+     "rows": [
+      [
+       "3.1.1",
+       {
+        "lo": "ເຊັນສັນຍາ, ເຫຼັກມາຮອດ, ວາງກະດູກງູ",
+        "en": "Contract signed, steel delivered, keel laid",
+        "zh": "签约、钢材到场、铺设龙骨"
+       },
+       "30%",
+       "150,000",
+       "150,000",
+       ""
+      ],
+      [
+       "3.1.2",
+       {
+        "lo": "ໂຕເຮືອສຳເລັດ ແລະ ຜ່ານການກວດ",
+        "en": "Hull complete and inspected",
+        "zh": "船体完成并通过检验"
+       },
+       "40%",
+       "200,000",
+       "350,000",
+       ""
+      ],
+      [
+       "3.1.3",
+       {
+        "lo": "ຕິດຕັ້ງເຄື່ອງຈັກ, ທົດລອງແລ່ນ, ສົ່ງມອບ",
+        "en": "Engine installed, sea trial, handover",
+        "zh": "安装发动机、试航、交付"
+       },
+       "30%",
+       "150,000",
+       "500,000",
+       ""
+      ],
+      [
+       "",
+       {
+        "lo": "ລວມ",
+        "en": "Total",
+        "zh": "合计"
+       },
+       "100%",
+       "500,000",
+       "500,000",
+       ""
+      ]
+     ],
+     "total_row": true,
+     "align": [
+      "l",
+      "l",
+      "r",
+      "r",
+      "r",
+      "l"
+     ]
+    },
+    {
+     "type": "callout",
+     "text": {
+      "lo": "ທາງເລືອກ: ຖືເງິນຄ້ຳປະກັນ ~10% ຂອງງວດທີ 3 ຈົນໝົດເວລາຮັບປະກັນ (ພາກຜະໜວກ ຄ).",
+      "en": "Option: hold about 10% of installment 3 as retention until the warranty period ends (Annex C).",
+      "zh": "可选：保留第3期约10%作为质保金，直至质保期结束（附录C）。"
+     }
+    },
+    {
+     "type": "h",
+     "level": 3,
+     "text": {
+      "lo": "3.2 ກົດການເບີກຈ່າຍ",
+      "en": "3.2 Release rules",
+      "zh": "3.2 拨付规则"
+     }
+    },
+    {
+     "type": "numbered",
+     "items": [
+      [
+       "3.2.1",
+       {
+        "lo": "ຈ່າຍພາຍຫຼັງຜູ້ກວດສອບອິດສະຫຼະ ແລະ ຕົວແທນ DSV ເຊັນຮັບ.",
+        "en": "Pay only after sign-off by the independent surveyor and a DSV representative.",
+        "zh": "经独立验船师和DSV代表签字确认后方可付款。"
+       }
+      ],
+      [
+       "3.2.2",
+       {
+        "lo": "ຈ່າຍເຂົ້າບັນຊີໂຄງການສະເພາະ; ຫ້າມນຳໄປໃຊ້ຢ່າງອື່ນ.",
+        "en": "Pay into a dedicated project account; no use for other purposes.",
+        "zh": "资金汇入项目专用账户，不得挪作他用。"
+       }
+      ],
+      [
+       "3.2.3",
+       {
+        "lo": "DSV ມີສິດຢຸດຈ່າຍ ຖ້າຊ້າກວ່າແຜນເກີນກຳນົດ ຫຼື ຄຸນນະພາບບໍ່ຜ່ານ (ພາກຜະໜວກ ຄ).",
+        "en": "DSV may suspend payment if progress is late beyond the agreed limit or quality fails (Annex C).",
+        "zh": "进度延误超出约定期限或质量不合格时，DSV可暂停付款（附录C）。"
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": {
+    "lo": "ຄວາມສ່ຽງ ແລະ ບາດກ້າວຕໍ່ໄປ",
+    "en": "Risks and Next Steps",
+    "zh": "风险与下一步"
+   },
+   "blocks": [
+    {
+     "type": "h",
+     "level": 3,
+     "text": {
+      "lo": "4.1 ຄວາມສ່ຽງ ແລະ ມາດຕະການ",
+      "en": "4.1 Risks and measures",
+      "zh": "4.1 风险与措施"
+     }
+    },
+    {
+     "type": "table",
+     "columns": [
+      "#",
+      {
+       "lo": "ຄວາມສ່ຽງ",
+       "en": "Risk",
+       "zh": "风险"
+      },
+      {
+       "lo": "ມາດຕະການ",
+       "en": "Measure",
+       "zh": "措施"
+      },
+      {
+       "lo": "ຜູ້ຮັບຜິດຊອບ",
+       "en": "Responsible",
+       "zh": "负责方"
+      }
+     ],
+     "rows": [
+      [
+       "4.1.1",
+       {
+        "lo": "ຕົ້ນທຶນເກີນ 500,000 ບາດ",
+        "en": "Cost exceeds 500,000 baht",
+        "zh": "成本超出500,000泰铢"
+       },
+       {
+        "lo": "ລາຄາຄົງທີ່/ເພດານ; ສ່ວນເກີນທ່າເຮືອຮັບ",
+        "en": "Lump sum or cap; overrun borne by the port",
+        "zh": "包干价/上限；超支由港方承担"
+       },
+       {
+        "lo": "ທ່າເຮືອ",
+        "en": "Port",
+        "zh": "港方"
+       }
+      ],
+      [
+       "4.1.2",
+       {
+        "lo": "ກໍ່ສ້າງຊັກຊ້າ",
+        "en": "Construction delay",
+        "zh": "施工延误"
+       },
+       {
+        "lo": "ຄ່າປັບ ແລະ ຢຸດຈ່າຍງວດຕໍ່ໄປ",
+        "en": "Penalty and suspension of the next installment",
+        "zh": "罚款并暂停下一期付款"
+       },
+       "DSV"
+      ],
+      [
+       "4.1.3",
+       {
+        "lo": "ຄຸນນະພາບບໍ່ຜ່ານ",
+        "en": "Poor quality",
+        "zh": "质量不合格"
+       },
+       {
+        "lo": "ຜູ້ກວດສອບອິດສະຫຼະເຊັນຮັບທຸກງວດ",
+        "en": "Independent surveyor signs off every stage",
+        "zh": "每阶段由独立验船师签字确认"
+       },
+       "DSV"
+      ],
+      [
+       "4.1.4",
+       {
+        "lo": "ທ່າເຮືອປ່ຽນເຈົ້າຂອງ ຫຼື ຜິດສັນຍາ",
+        "en": "Port changes owner or breaches the contract",
+        "zh": "港方变更所有人或违约"
+       },
+       {
+        "lo": "ຂໍ້ຜູກມັດຜູ້ສືບທອດ, ຈຳນອງ/ເຈົ້າຂອງຮ່ວມ",
+        "en": "Successor-binding clause; lien or co-ownership",
+        "zh": "继任者约束条款；抵押或共同所有"
+       },
+       "DSV"
+      ],
+      [
+       "4.1.5",
+       {
+        "lo": "ລະດັບນ້ຳປ່ຽນແປງ",
+        "en": "Changing water levels",
+        "zh": "水位变化"
+       },
+       {
+        "lo": "ອອກແບບໃຫ້ເໝາະກັບລະດູແລ້ງ ແລະ ລະດູຝົນ",
+        "en": "Design for both the dry and wet seasons",
+        "zh": "按旱季和雨季设计"
+       },
+       {
+        "lo": "ທ່າເຮືອ",
+        "en": "Port",
+        "zh": "港方"
+       }
+      ]
+     ]
+    },
+    {
+     "type": "h",
+     "level": 3,
+     "text": {
+      "lo": "4.2 ບາດກ້າວຕໍ່ໄປ",
+      "en": "4.2 Next steps",
+      "zh": "4.2 下一步"
+     }
+    },
+    {
+     "type": "table",
+     "columns": [
+      "#",
+      {
+       "lo": "ການດຳເນີນງານ",
+       "en": "Action",
+       "zh": "行动"
+      },
+      {
+       "lo": "ຜູ້ຮັບຜິດຊອບ",
+       "en": "Responsible",
+       "zh": "负责方"
+      }
+     ],
+     "rows": [
+      [
+       "4.2.1",
+       {
+        "lo": "ສົ່ງ BOQ (ໂຕເຮືອ/ເຄື່ອງຈັກ), ແບບ ແລະ ໃບສະເໜີລາຄາ",
+        "en": "Provide BOQ (hull/engine), drawings and quotations",
+        "zh": "提供工程量清单（船体/发动机）、图纸和报价"
+       },
+       {
+        "lo": "ທ່າເຮືອ",
+        "en": "Port",
+        "zh": "港方"
+       }
+      ],
+      [
+       "4.2.2",
+       {
+        "lo": "ກວດລາຄາຕະຫຼາດ ແລະ ຢືນຢັນງົບ 500,000 ບາດ",
+        "en": "Check market prices and confirm the 500,000 baht budget",
+        "zh": "核查市场价格并确认500,000泰铢预算"
+       },
+       "DSV"
+      ],
+      [
+       "4.2.3",
+       {
+        "lo": "ຕົກລົງອັດຕາຄ່າທຳນຽມ ແລະ ອາຍຸສິດຜ່ານ",
+        "en": "Agree the fare rate and the duration of the passage right",
+        "zh": "商定费率和通行权期限"
+       },
+       {
+        "lo": "DSV + ທ່າເຮືອ",
+        "en": "DSV + Port",
+        "zh": "DSV + 港方"
+       }
+      ],
+      [
+       "4.2.4",
+       {
+        "lo": "ຮ່າງສັນຍາ ແລະ ຂໍຄຳປຶກສາດ້ານກົດໝາຍ",
+        "en": "Draft the agreement and obtain legal advice",
+        "zh": "起草协议并取得法律意见"
+       },
+       "DSV"
+      ],
+      [
+       "4.2.5",
+       {
+        "lo": "ແຕ່ງຕັ້ງຜູ້ກວດສອບອິດສະຫຼະ ແລະ ເປີດບັນຊີໂຄງການ",
+        "en": "Appoint the independent surveyor and open the project account",
+        "zh": "委任独立验船师并开设项目账户"
+       },
+       "DSV"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": {
+    "lo": "5. ການອະນຸມັດ",
+    "en": "5. Approval",
+    "zh": "5. 批准"
+   },
+   "blocks": [
+    {
+     "type": "signatures",
+     "parties": [
+      {
+       "title": "DSV"
+      },
+      {
+       "title": {
+        "lo": "ທ່າເຮືອ",
+        "en": "The port",
+        "zh": "港方"
+       }
+      }
+     ]
+    }
+   ],
+   "numbered": false
+  },
+  {
+   "title": {
+    "lo": "ຕາຕະລາງເວລາລົດຮັບສົ່ງ DSV",
+    "en": "DSV shuttle van schedule",
+    "zh": "DSV班车时刻表"
+   },
+   "annex": true,
+   "blocks": [
+    {
+     "type": "table",
+     "columns": [
+      {
+       "lo": "ເສັ້ນທາງ",
+       "en": "Route",
+       "zh": "路线"
+      },
+      {
+       "lo": "ເວລາອອກ",
+       "en": "Departures",
+       "zh": "发车时间"
+      },
+      {
+       "lo": "ຖ້ຽວ",
+       "en": "Trips",
+       "zh": "班次"
+      }
+     ],
+     "rows": [
+      [
+       {
+        "lo": "ລີສອດ → ວຽງຈັນ",
+        "en": "Resort → Vientiane",
+        "zh": "度假区 → 万象"
+       },
+       "08:30 · 11:30 · 17:30 · 20:30",
+       "4"
+      ],
+      [
+       {
+        "lo": "ວຽງຈັນ → ລີສອດ",
+        "en": "Vientiane → Resort",
+        "zh": "万象 → 度假区"
+       },
+       "11:30 · 14:30 · 20:30 · 23:30",
+       "4"
+      ],
+      [
+       {
+        "lo": "ລີສອດ → ຂົວມິດຕະພາບ ລາວ-ໄທ",
+        "en": "Resort → Lao-Thai Friendship Bridge",
+        "zh": "度假区 → 老泰友谊桥"
+       },
+       "07:00 · 13:00 · 19:00",
+       "3"
+      ],
+      [
+       {
+        "lo": "ຂົວມິດຕະພາບ ລາວ-ໄທ → ລີສອດ",
+        "en": "Lao-Thai Friendship Bridge → Resort",
+        "zh": "老泰友谊桥 → 度假区"
+       },
+       "09:30 · 16:30 · 21:30",
+       "3"
+      ],
+      [
+       {
+        "lo": "ລວມ",
+        "en": "Total",
+        "zh": "合计"
+       },
+       "",
+       "14"
+      ]
+     ],
+     "total_row": true,
+     "align": [
+      "l",
+      "l",
+      "r"
+     ]
+    },
+    {
+     "type": "callout",
+     "text": {
+      "lo": "ການຄິດໄລ່ໃນພາກ 2.2 ໃຊ້ 4 ຖ້ຽວ/ມື້ ຕາມທີ່ DSV ກຳນົດ.",
+      "en": "The calculation in section 2.2 uses 4 trips per day, as specified by DSV.",
+      "zh": "第2.2节测算采用DSV指定的每日4趟。"
+     }
+    },
+    {
+     "type": "image",
+     "path": "shuttle_schedule.jpg",
+     "width_cm": 15
+    }
+   ]
+  },
+  {
+   "title": {
+    "lo": "ສົມມຸດຖານການຄິດໄລ່",
+    "en": "Calculation assumptions",
+    "zh": "测算假设"
+   },
+   "annex": true,
+   "blocks": [
+    {
+     "type": "numbered",
+     "items": [
+      [
+       "B1",
+       {
+        "lo": "ມູນຄ່າຖ້ຽວຟຣີ = ລາຄາປັດຈຸບັນ 30,000 ກີບ ຕໍ່ຄັນ ຕໍ່ຖ້ຽວ.",
+        "en": "The value of a free trip equals the current price of 30,000 kip per car per trip.",
+        "zh": "免费通行价值按现行价格每车每趟30,000基普计算。"
+       }
+      ],
+      [
+       "B2",
+       {
+        "lo": "ອັດຕາແລກປ່ຽນຄົງທີ່ 683 ກີບ ຕໍ່ 1 ບາດ; ເດີນເຮືອ 365 ວັນຕໍ່ປີ.",
+        "en": "Fixed exchange rate of 683 kip per baht; 365 operating days per year.",
+        "zh": "汇率固定为每泰铢683基普；全年运营365天。"
+       }
+      ],
+      [
+       "B3",
+       {
+        "lo": "ບໍ່ຄິດເງິນເຟີ້ ແລະ ບໍ່ຄິດສ່ວນຫຼຸດມູນຄ່າເງິນ; ຈຳນວນຖ້ຽວຄົງທີ່ທຸກມື້.",
+        "en": "No inflation or discounting; the number of trips is constant every day.",
+        "zh": "不考虑通胀和折现；每日班次恒定。"
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": {
+    "lo": "ລາຍການທີ່ຕ້ອງຕົກລົງກັບທ່າເຮືອ",
+    "en": "Items to be agreed with the port",
+    "zh": "需与港方商定事项"
+   },
+   "annex": true,
+   "blocks": [
+    {
+     "type": "numbered",
+     "items": [
+      [
+       "C1",
+       {
+        "lo": "ການແຍກງົບ ໂຕເຮືອ / ເຄື່ອງຈັກ ຂອງ 500,000 ບາດ.",
+        "en": "Split of the 500,000 baht between hull and engine.",
+        "zh": "500,000泰铢在船体与发动机之间的划分。"
+       }
+      ],
+      [
+       "C2",
+       {
+        "lo": "ອັດຕາຫຼຸດຄ່າທຳນຽມ (ຫຼື ຟຣີ) ແລະ ໄລຍະສັນຍາສິດຜ່ານ (ປີ).",
+        "en": "Fare discount rate (or free passage) and the passage period in years.",
+        "zh": "票价优惠比例（或免费）及通行权期限（年）。"
+       }
+      ],
+      [
+       "C3",
+       {
+        "lo": "ໄລຍະຮັບປະກັນ (ສະເໜີ 12 ເດືອນ) ແລະ ເງິນຄ້ຳປະກັນ (ສະເໜີ ~10%).",
+        "en": "Warranty period (12 months proposed) and retention (about 10% proposed).",
+        "zh": "质保期（建议12个月）和质保金（建议约10%）。"
+       }
+      ],
+      [
+       "C4",
+       {
+        "lo": "ກຳນົດຊັກຊ້າທີ່ DSV ຢຸດຈ່າຍໄດ້ (ສະເໜີ 30 ວັນ).",
+        "en": "Delay limit after which DSV may suspend payment (30 days proposed).",
+        "zh": "DSV可暂停付款的延误期限（建议30天）。"
+       }
+      ]
+     ]
+    }
+   ]
+  }
+ ]
+}

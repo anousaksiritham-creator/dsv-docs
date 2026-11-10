@@ -1,0 +1,36 @@
+{
+ "meta": {
+  "type": "report",
+  "code": "PROJECT-2026",
+  "kind": "Report",
+  "status": "draft",
+  "date": "2026-11-10",
+  "title": {"lo": "ບົດລາຍງານ ...", "en": "... Report", "zh": "……报告"},
+  "subtitle": {"lo": "ສະຫຼຸບ · ການວິເຄາະ · ແຜນດຳເນີນງານ", "en": "Conclusion · Analysis · Plan", "zh": "结论 · 分析 · 计划"},
+  "info": [
+   [{"lo": "ໂຄງການ", "en": "Project", "zh": "项目"}, "..."],
+   [{"lo": "ວັນທີ", "en": "Date", "zh": "日期"}, "2026-11-10"],
+   [{"lo": "ຈັດທຳໂດຍ", "en": "Prepared by", "zh": "编制"}, "DSV"],
+   [{"lo": "ສະເໜີຕໍ່", "en": "Prepared for", "zh": "呈报"}, {"lo": "ຄະນະບໍລິຫານ", "en": "Management", "zh": "管理层"}]
+  ]
+ },
+ "sections": [
+  {"title": {"lo": "ສະຫຼຸບສຳລັບຜູ້ບໍລິຫານ", "en": "Executive Summary", "zh": "执行摘要"}, "numbered": false, "blocks": [
+   {"type": "p", "text": "..."},
+   {"type": "kv", "rows": [[{"lo": "ຂໍ້ສະເໜີ", "en": "Recommendation", "zh": "建议"}, "..."]]}
+  ]},
+  {"title": {"lo": "ພາກທີ 1", "en": "Section 1", "zh": "第一部分"}, "blocks": [
+   {"type": "h", "level": 3, "text": "1.1 ..."},
+   {"type": "table", "columns": ["#", {"lo": "ລາຍການ", "en": "Item", "zh": "项目"}, {"lo": "ຈຳນວນ", "en": "Amount", "zh": "金额"}], "widths": [1.5, 11, 4], "rows": [["1.1", "...", "0"]], "total_row": false},
+   {"type": "callout", "text": "...", "tone": "info"},
+   {"type": "numbered", "items": ["...", "..."]},
+   {"type": "image", "path": "figure1.png", "width_cm": 15, "caption": {"lo": "ຮູບທີ 1: ...", "en": "Figure 1: ...", "zh": "图1：……"}}
+  ]},
+  {"title": {"lo": "ການອະນຸມັດ", "en": "Approval", "zh": "批准"}, "numbered": false, "blocks": [
+   {"type": "signatures", "parties": [{"title": "DSV"}, {"title": {"lo": "ຄູ່ສັນຍາ", "en": "Counterparty", "zh": "对方"}}]}
+  ]},
+  {"title": {"lo": "ສົມມຸດຖານ", "en": "Assumptions", "zh": "假设"}, "annex": true, "blocks": [
+   {"type": "bullets", "items": ["..."]}
+  ]}
+ ]
+}

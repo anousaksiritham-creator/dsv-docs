@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="lo">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DSV</title>
+<!-- Dansavanh document viewer. Built by scripts/build_html.py: do not edit a generated copy, rebuild it. -->
+<style>
+html,body{margin:0;padding:0}
+body{background:#E9ECEA}
+#bar{position:sticky;top:0;z-index:5;display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:8px 14px;background:#fff;border-bottom:1px solid #C9D1CC}
+#bar,#bar *{font:13px/1.3 'Phetsarath OT','Segoe UI',Arial,sans-serif;color:#1B1F1D}
+#bar select,#bar button{padding:5px 10px;border:1px solid #C9D1CC;border-radius:4px;background:#fff;cursor:pointer}
+#bar button.on{background:#006A3C;border-color:#006A3C;color:#fff}
+#bar button.go{background:#006A3C;border-color:#006A3C;color:#fff;font-weight:bold}
+#bar .gap{flex:1}
+#bar .hint{color:#5A625E;font-size:12px;flex-basis:100%}
+#sheet{width:16.5cm;margin:18px auto;background:#fff;padding:.8cm 2cm 1.2cm 2.5cm;box-shadow:0 1px 6px rgba(0,0,0,.18)}
+table.pg{width:100%;border-collapse:collapse}
+td.pgh{padding:0 0 .45cm 0}
+td.pgb{padding:0}
+td,th{overflow-wrap:anywhere}
+.sfoot{margin-top:1cm;border-top:.5pt solid #C9D1CC;padding-top:5pt}
+.sfoot img{vertical-align:middle;margin-right:8px}
+div.pb{break-before:page;page-break-before:always;height:0}
+@media screen and (max-width:22cm){#sheet{width:auto;margin:0;padding:16px;overflow-x:auto}}
+@media print{
+ body{background:#fff}
+ .noprint{display:none!important}
+ #sheet{width:auto;margin:0;padding:0;box-shadow:none}
+ *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+<style id="doccss"></style>
+<style id="pagecss"></style>
+</head>
+<body>
+<div id="bar" class="noprint"></div>
+<div id="sheet"></div>
+<script type="application/json" id="dsv-data">__DSV_DATA__</script>
+<script>
+(function () {
+'use strict';
+const PAY = JSON.parse(document.getElementById('dsv-data').textContent);
+const G = '#006A3C', INK = '#1B1F1D', MU = '#5A625E', RULE = '#C9D1CC', SOFT = '#F3F6F4', WARN = '#C55A11';
+const CM = 37.795; // px per cm at 96 dpi
+const FONTS = {
+  lo: {f: "'Phetsarath OT','Noto Sans Lao','Lao UI','Leelawadee UI',sans-serif", size: 11, ls: 1.25},
+  en: {f: "Arial,Helvetica,sans-serif", size: 10.5, ls: 1.15},
+  zh: {f: "'Microsoft YaHei','PingFang SC','Noto Sans SC',sans-serif", size: 10.5, ls: 1.2}
+};
+const LABELS = {
+  lo: {note: 'ໝາຍເຫດ', warn: 'ຂໍ້ຄວນລະວັງ', annex: 'ພາກຜະໜວກ', name: 'ຊື່', position: 'ຕຳແໜ່ງ', signature: 'ລາຍເຊັນ', date: 'ວັນທີ',
+       ref: 'ເລກທີ', to: 'ຮຽນ', subject: 'ເລື່ອງ', attention: 'ອ້າງເຖິງ',
+       footer_draft: 'ສະບັບຮ່າງ — ບໍ່ແມ່ນຄຳປຶກສາດ້ານກົດໝາຍ ຫຼື ການເງິນ.', footer_final: 'ເອກະສານພາຍໃນ Dansavanh',
+       draft: 'ສະບັບຮ່າງ', final: 'ສະບັບສົມບູນ', approval: 'ການອະນຸມັດ', annex_letters: 'ກຂຄງຈສຊຍດຕ', ref_suffix: '/ດສວ/',
+       pg: ['ໜ້າ ', ' / ', ''], name_lang: 'ລາວ'},
+  en: {note: 'Note', warn: 'Caution', annex: 'Annexes', name: 'Name', position: 'Position', signature: 'Signature', date: 'Date',
+       ref: 'Ref.', to: 'To', subject: 'Subject', attention: 'Reference',
+       footer_draft: 'Draft — not legal or financial advice.', footer_final: 'Dansavanh internal document',
+       draft: 'DRAFT', final: 'FINAL', approval: 'Approval', annex_letters: 'ABCDEFGHIJ', ref_suffix: '/DSV/',
+       pg: ['Page ', ' of ', ''], name_lang: 'English'},
+  zh: {note: '说明', warn: '注意', annex: '附录', name: '姓名', position: '职务', signature: '签名', date: '日期',
+       ref: '编号', to: '致', subject: '事由', attention: '参照',
+       footer_draft: '报告草稿——不构成法律或财务建议。', footer_final: '丹沙湾内部文件',
+       draft: '草稿', final: '定稿', approval: '批准', annex_letters: 'ABCDEFGHIJ', ref_suffix: '/DSV/',
+       pg: ['第 ', ' 页，共 ', ' 页'], name_lang: '中文'}
+};
+const LAO_MONTHS = ['ມັງກອນ', 'ກຸມພາ', 'ມີນາ', 'ເມສາ', 'ພຶດສະພາ', 'ມິຖຸນາ', 'ກໍລະກົດ', 'ສິງຫາ', 'ກັນຍາ', 'ຕຸລາ', 'ພະຈິກ', 'ທັນວາ'];
+const EN_MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const DATE_LABELS = ['date', 'ວັນທີ', 'Date', '日期'];
+const ORG = {line1: 'Cultural & Eco-Tourism Resort', line2: '丹沙湾文化生态旅游度假区'};
+const AL = {l: 'left', c: 'center', r: 'right'};
+const DIM = {}; // data URI -> natural size
+
+// ---------------------------------------------------------------- helpers
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const txt = s => esc(s).replace(/\n/g, '<br>');
+const isLangDict = o => { const k = Object.keys(o); return k.length > 0 && k.every(x => x === 'lo' || x === 'en' || x === 'zh'); };
+
+function resolve(obj, lang) {
+  if (Array.isArray(obj)) return obj.map(v => resolve(v, lang));
+  if (obj && typeof obj === 'object') {
+    if (isLangDict(obj)) return obj[lang] || obj.lo || obj.en || obj.zh || '';
+    const out = {};
+    for (const k in obj) out[k] = resolve(obj[k], lang);
+    return out;
+  }
+  return obj;
+}
+function walk(obj, fn) {
+  if (Array.isArray(obj)) obj.forEach(v => walk(v, fn));
+  else if (obj && typeof obj === 'object') { fn(obj); for (const k in obj) walk(obj[k], fn); }
+}
+function langsOf(data) {
+  const found = new Set();
+  walk(data, o => { if (isLangDict(o)) Object.keys(o).forEach(k => found.add(k)); });
+  return ['lo', 'en', 'zh'].filter(l => found.has(l));
+}
+function fmtDate(value, lang, short) {
+  if (!value) return '';
+  const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(value));
+  if (!m) return String(value);
+  const y = +m[1], mo = +m[2], d = +m[3];
+  if (mo < 1 || mo > 12) return String(value);
+  if (short) return m[3] + '.' + m[2] + '.' + m[1];
+  if (lang === 'lo') return d + ' ' + LAO_MONTHS[mo - 1] + ' ' + y;
+  if (lang === 'zh') return y + '年' + mo + '月' + d + '日';
+  return d + ' ' + EN_MONTHS[mo - 1] + ' ' + y;
+}
+function isNum(v) {
+  const s = String(v).trim();
+  return /^[\s\-+]?[\d.,\s]+%?[\w/²³]*$/.test(s) && /\d/.test(s);
+}
+
+// ---------------------------------------------------------------- styles
+// One class per element and no descendant selectors: Word's HTML import ignores anything richer.
+function docCss(lang) {
+  const fx = FONTS[lang], B = fx.size;
+  return `
+p,td,th,h1,h2,h3{font-family:${fx.f};font-size:${B}pt;line-height:${fx.ls};color:${INK}}
+p{margin:0 0 6pt 0}
+table{border-collapse:collapse}
+td,th{vertical-align:top;text-align:left;font-weight:normal;padding:0}
+tr{page-break-inside:avoid}
+h1,h2,h3{font-weight:bold;page-break-after:avoid;line-height:1.2}
+h1.h1{font-size:${B + 7}pt;color:${G};margin:10pt 0 6pt 0}
+h2.h2{font-size:${B + 3}pt;color:${G};margin:16pt 0 6pt 0;border-bottom:.5pt solid ${RULE};padding-bottom:3pt}
+h3.h3{font-size:${B + 1}pt;color:${INK};margin:10pt 0 6pt 0}
+p.j{text-align:justify}
+p.mono{font-family:Consolas,'Courier New',monospace;font-size:7.5pt;color:${MU};margin:0 0 10pt 0}
+p.title{font-size:${B + 8}pt;font-weight:bold;line-height:1.2;margin:0 0 4pt 0;page-break-after:avoid}
+p.sub{font-size:${B + 0.5}pt;color:${MU};margin:0 0 14pt 0}
+p.org1{font-size:9pt;font-weight:bold;color:${G};margin:0;line-height:1.1}
+p.org2{font-size:8pt;color:${MU};margin:0 0 4pt 0;line-height:1.1}
+td.lh{border-bottom:3pt solid ${G};vertical-align:middle;padding:0 0 3pt 0}
+td.g{border:.5pt solid ${RULE};padding:3pt 5.5pt;font-size:${B - 1}pt}
+td.gk{border:.5pt solid ${RULE};padding:3pt 5.5pt;font-size:${B - 1}pt;background:${SOFT};font-weight:bold}
+td.gt{border:.5pt solid ${RULE};padding:3pt 5.5pt;font-size:${B - 1}pt;background:${SOFT};font-weight:bold}
+th.gh{border:.5pt solid ${G};padding:3pt 5.5pt;font-size:${B - 1}pt;background:${G};color:#FFFFFF;font-weight:bold;vertical-align:middle}
+td.lb{padding:0 0 3pt 0}
+td.lbm{padding:0 0 3pt 0;color:${MU}}
+td.lbb{padding:0 0 3pt 0;font-weight:bold}
+td.lt{padding:0 0 3pt 0}
+td.note{padding:4.5pt 8pt;font-size:${B - 0.5}pt;background:${SOFT};border-left:3pt solid ${G}}
+td.warn{padding:4.5pt 8pt;font-size:${B - 0.5}pt;background:#FFF4E5;border-left:3pt solid ${WARN}}
+td.verdict{padding:4.5pt 8pt;border:.75pt solid ${G};font-weight:bold}
+p.cap{font-size:8.5pt;color:${MU};font-style:italic}
+p.fig{text-align:center;margin:0 0 4pt 0}
+p.sp{margin:0;font-size:4pt;line-height:1}
+p.rule{margin:0 0 10pt 0;font-size:4pt;line-height:1;border-bottom:.5pt solid ${RULE}}
+p.party{font-weight:bold;color:${G};margin:0 0 3pt 0}
+p.sm{font-size:${B - 0.5}pt;margin:0}
+p.sg{margin:0 0 0 9.5cm}
+p.sgb{margin:0 0 0 9.5cm;font-weight:bold}
+p.sgm{margin:0 0 0 9.5cm;color:${MU}}
+p.ft{font-size:8pt;color:${MU};margin:0}
+td.ft{font-size:8pt;color:${MU};border-top:.5pt solid ${RULE};padding:4pt 0 0 0;vertical-align:middle}
+`;
+}
+const cssStr = s => '"' + String(s).replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/\n/g, ' ') + '"';
+function pageCss(r, lang) {
+  const pg = LABELS[lang].pg;
+  const box = `font-family:${FONTS[lang].f};font-size:8pt;color:${MU};border-top:.5pt solid ${RULE};padding-top:4pt;vertical-align:top;`;
+  return `@page{size:A4;margin:.8cm 2cm 2cm 2.5cm;
+ @bottom-left{content:${cssStr(r.foot)};${box}text-align:left}
+ @bottom-center{content:"";${box}}
+ @bottom-right{content:${cssStr(pg[0])} counter(page) ${cssStr(pg[1])} counter(pages) ${cssStr(pg[2])};${box}text-align:right;white-space:nowrap}
+}`;
+}
+
+// ---------------------------------------------------------------- document builder
+// Returns {head: letterhead html, body: document html, foot: footer text, name: file name}.
+// word=true emits the markup variant Microsoft Word needs (px image sizes, br page breaks).
+function build(raw, lang, status, word) {
+  const d = resolve(raw, lang), m = d.meta || {}, L = LABELS[lang], o = [];
+  let secNo = 0, annexNo = 0;
+  const SP = '<p class="sp">&nbsp;</p>';
+  const TBL = cls => `<table class="${cls}" width="100%" cellspacing="0" cellpadding="0" style="width:100%`;
+
+  function img(src, hcm, wcm) {
+    const n = DIM[src] || {w: 1, h: 1};
+    const w = hcm ? hcm * n.w / n.h : wcm, h = hcm ? hcm : wcm * n.h / n.w;
+    return word ? `<img src="${src}" width="${Math.round(w * CM)}" height="${Math.round(h * CM)}">`
+                : `<img src="${src}" alt="" style="width:${w.toFixed(2)}cm;height:${h.toFixed(2)}cm">`;
+  }
+  function letterhead() {
+    const logo = PAY.logos[m.mono ? 'mono' : 'horizontal'];
+    return TBL('lay') + `"><tr><td class="lh" width="52%">${logo ? img(logo, 1.0) : ''}</td>` +
+      `<td class="lh" width="48%" style="text-align:right"><p class="org1" style="text-align:right">${txt(m.org_line1 || ORG.line1)}</p>` +
+      `<p class="org2" style="text-align:right">${txt(m.org_line2 || ORG.line2)}</p></td></tr></table>`;
+  }
+  function pageBreak() {
+    o.push(word ? '<br clear="all" style="page-break-before:always">' : '<div class="pb"></div>');
+  }
+  function metaLine() {
+    const parts = ['DSV'].concat([m.code, m.kind].filter(Boolean).map(String)).join(' / ').toUpperCase();
+    const right = (status === 'draft' ? L.draft : L.final) + (m.date ? ' · ' + fmtDate(m.date, lang, true) : '');
+    o.push(TBL('lay') + `"><tr><td><p class="mono">${txt(parts)}</p></td>` +
+      `<td style="text-align:right"><p class="mono" style="text-align:right">${txt(right)}</p></td></tr></table>`);
+  }
+  function titleBlock() {
+    if (m.title) o.push(`<p class="title">${txt(m.title)}</p>`);
+    if (m.subtitle) o.push(`<p class="sub">${txt(m.subtitle)}</p>`);
+  }
+  function infoTable(rows) {
+    if (!rows || !rows.length) return;
+    let h = TBL('grid') + ';table-layout:fixed">';
+    for (let i = 0; i < rows.length; i += 2) {
+      h += '<tr>';
+      for (let k = 0; k < 2; k++) {
+        const pair = rows[i + k];
+        let label = '', value = '';
+        if (pair) { label = pair[0]; value = DATE_LABELS.includes(label) ? fmtDate(pair[1], lang) : pair[1]; }
+        h += `<td class="gk" width="20%" style="width:20%;vertical-align:middle">${txt(label)}</td>` +
+             `<td class="g" width="30%" style="width:30%;vertical-align:middle">${txt(value)}</td>`;
+      }
+      h += '</tr>';
+    }
+    o.push(h + '</table>', SP);
+  }
+  function heading(text, level) {
+    o.push(`<h${level} class="h${level}">${txt(text)}</h${level}>`);
+  }
+  function list(items, numbered) {
+    let h = TBL('lay') + '">';
+    (items || []).forEach((it, k) => {
+      const custom = Array.isArray(it);
+      const label = custom ? it[0] : (numbered ? (k + 1) + ')' : '•');
+      const w = custom ? 1.4 : 0.9;
+      h += `<tr><td class="${custom ? 'lbb' : numbered ? 'lbm' : 'lb'}" width="${Math.round(w * CM)}" style="width:${w}cm;padding-left:.2cm">${txt(label)}</td>` +
+           `<td class="lt">${txt(custom ? it[1] : it)}</td></tr>`;
+    });
+    o.push(h + '</table>');
+  }
+  function table(b) {
+    const cols = b.columns || [], rows = b.rows || [];
+    const n = cols.length || (rows[0] || []).length || 1;
+    const w = (b.widths && b.widths.length === n) ? b.widths : Array(n).fill(1);
+    const tot = w.reduce((a, x) => a + x, 0);
+    const pc = w.map(x => (x * 100 / tot).toFixed(2) + '%');
+    const A = b.align || [];
+    let h = TBL('grid') + ';table-layout:fixed">';
+    if (cols.length) {
+      h += '<thead><tr>' + cols.map((c, j) =>
+        `<th class="gh" width="${pc[j]}" style="width:${pc[j]};text-align:${AL[A[j]] || 'left'}">${txt(c)}</th>`).join('') + '</tr></thead>';
+    }
+    h += '<tbody>';
+    rows.forEach((r, i) => {
+      const last = b.total_row && i === rows.length - 1;
+      h += '<tr>';
+      for (let j = 0; j < n; j++) {
+        const v = r[j] == null ? '' : r[j];
+        const a = A[j] || (isNum(v) && j > 0 ? 'r' : 'l');
+        h += `<td class="${last ? 'gt' : 'g'}" width="${pc[j]}" style="width:${pc[j]};text-align:${AL[a] || 'left'}">${txt(v)}</td>`;
+      }
+      h += '</tr>';
+    });
+    o.push(h + '</tbody></table>', b.caption ? `<p class="cap">${txt(b.caption)}</p>` : SP);
+  }
+  function kv(rows) {
+    let h = TBL('grid') + ';table-layout:fixed">';
+    (rows || []).forEach(r => {
+      h += `<tr><td class="gk" width="28%" style="width:28%">${txt(r[0])}</td><td class="g" width="72%" style="width:72%">${txt(r[1])}</td></tr>`;
+    });
+    o.push(h + '</table>', SP);
+  }
+  function box(cls, inner) {
+    o.push(TBL('box') + `"><tr><td class="${cls}">${inner}</td></tr></table>`, SP);
+  }
+  function callout(text, tone) {
+    const warn = tone === 'warn';
+    box(warn ? 'warn' : 'note', `<b style="color:${warn ? WARN : G}">${txt(warn ? L.warn : L.note)}: </b>${txt(text)}`);
+  }
+  function image(b) {
+    if (!b.src) { callout('[image not found: ' + (b.path || '') + ']', 'warn'); return; }
+    o.push(`<p class="fig" style="text-align:center">${img(b.src, 0, Math.min(parseFloat(b.width_cm) || 15, 16.5))}</p>`);
+    if (b.caption) o.push(`<p class="cap" style="text-align:center">${txt(b.caption)}</p>`);
+  }
+  function signatures(parties) {
+    parties = parties || [];
+    for (let i = 0; i < parties.length; i += 2) {
+      const group = parties.slice(i, i + 2);
+      const cw = group.length === 2 ? '47.5%' : '100%';
+      let h = TBL('lay') + ';table-layout:fixed"><tr>';
+      group.forEach((p, j) => {
+        if (j) h += '<td width="5%" style="width:5%">&nbsp;</td>';
+        const labels = [L.name, L.position, L.signature, L.date];
+        const values = [p.name || '', p.position || '', '', p.date || ''];
+        h += `<td width="${cw}" style="width:${cw}"><p class="party">${txt(p.title || '')}</p>` + TBL('grid') + ';table-layout:fixed">';
+        labels.forEach((lb, r) => {
+          const ht = r === 2 ? ';height:1.4cm' : '';
+          h += `<tr${r === 2 ? ' style="height:1.4cm"' : ''}><td class="gk" width="34%" style="width:34%${ht}">${txt(lb)}</td>` +
+               `<td class="g" width="66%" style="width:66%${ht}">${txt(values[r])}</td></tr>`;
+        });
+        h += '</table></td>';
+      });
+      o.push(h + '</tr></table>', '<p class="sp">&nbsp;</p>', SP);
+    }
+  }
+  function letterSigner(s) {
+    if (!s) return;
+    o.push(SP, `<p class="sg">${txt(s.closing || '')}&nbsp;</p>`, '<p class="sg">&nbsp;</p><p class="sg">&nbsp;</p><p class="sg">&nbsp;</p>',
+      `<p class="sgb">${txt(s.name || '')}</p>`, `<p class="sgm">${txt(s.position || '')}</p>`);
+  }
+  function block(b) {
+    switch (b.type) {
+      case 'p': o.push(`<p${lang === 'lo' ? '' : ' class="j"'}>${txt(b.text || '')}</p>`); break;
+      case 'h': heading(b.text || '', parseInt(b.level || 3, 10)); break;
+      case 'bullets': list(b.items, false); break;
+      case 'numbered': list(b.items, true); break;
+      case 'table': table(b); break;
+      case 'kv': kv(b.rows); break;
+      case 'callout': callout(b.text || '', b.tone || 'info'); break;
+      case 'formula': box('note', txt(b.text || '')); break;
+      case 'verdict': box('verdict', txt(b.text || '')); break;
+      case 'image': image(b); break;
+      case 'signatures': signatures(b.parties); break;
+      case 'pagebreak': pageBreak(); break;
+      default: console.warn('unknown block type', b.type);
+    }
+  }
+  function section(s) {
+    const title = s.title || '';
+    if (s.annex) {
+      if (annexNo === 0) { pageBreak(); heading(L.annex, 2); }
+      heading(L.annex_letters[annexNo % 10] + '. ' + title, 3);
+      annexNo++;
+    } else if (s.numbered !== false && title) {
+      secNo++;
+      heading(secNo + '. ' + title, 2);
+    } else if (title) {
+      heading(title, 2);
+    }
+    (s.blocks || []).forEach(block);
+  }
+
+  const sections = d.sections || [];
+  const kind = String(m.type || 'report').toLowerCase();
+  if (kind === 'letter') {
+    const year = String(m.date || '').slice(0, 4) || String(new Date().getFullYear());
+    const ref = m.ref_no || ('...........' + L.ref_suffix + year);
+    o.push(`<p class="sm" style="text-align:right">${txt(L.ref + ' ' + ref)}</p>`,
+           `<p class="sm" style="text-align:right">${txt(L.date + ' ' + fmtDate(m.date, lang))}</p>`, '<p>&nbsp;</p>');
+    [['to', L.to], ['subject', L.subject], ['attention', L.attention]].forEach(([key, lb]) => {
+      if (m[key]) o.push(`<p style="margin-bottom:4pt"><b>${txt(lb)}: </b>${txt(m[key])}</p>`);
+    });
+    o.push('<p class="rule">&nbsp;</p>');
+    sections.forEach(s => section(Object.assign({numbered: false}, s)));
+    letterSigner(m.signer);
+  } else if (kind === 'agreement') {
+    metaLine(); titleBlock(); infoTable(m.info);
+    sections.filter(s => !s.annex).forEach(section);
+    if (m.parties && m.parties.length) { heading(L.approval, 2); signatures(m.parties); }
+    sections.filter(s => s.annex).forEach(section);
+  } else {
+    metaLine(); titleBlock(); infoTable(m.info);
+    sections.forEach(section);
+  }
+
+  const foot = m.footer || (status === 'draft' ? L.footer_draft : (m.title || '') + ' · ' + L.footer_final);
+  const base = String(m.title || m.subject || m.code || 'DSV').replace(/[\\/:*?"<>|\n\r\t]+/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 80);
+  return {head: letterhead(), body: o.join('\n'), foot: foot, name: base + '_' + lang, title: m.title || m.subject || ''};
+}
+
+// ---------------------------------------------------------------- state and screen
+const S = {doc: 0, lang: PAY.lang || 'lo', status: {}};
+const bar = document.getElementById('bar'), sheet = document.getElementById('sheet');
+const curDoc = () => PAY.docs[S.doc];
+const curStatus = () => S.status[S.doc] || String((curDoc().data.meta || {}).status || 'draft').toLowerCase();
+
+function render() {
+  const langs = langsOf(curDoc().data);
+  if (langs.length && !langs.includes(S.lang)) S.lang = langs[0];
+  const r = build(curDoc().data, S.lang, curStatus(), false);
+  document.getElementById('doccss').textContent = docCss(S.lang);
+  document.getElementById('pagecss').textContent = pageCss(r, S.lang);
+  const sym = PAY.logos.symbol;
+  sheet.innerHTML = `<table class="pg"><thead><tr><td class="pgh">${r.head}</td></tr></thead>` +
+    `<tbody><tr><td class="pgb">${r.body}</td></tr></tbody></table>` +
+    `<div class="sfoot noprint"><p class="ft">${sym ? `<img src="${sym}" alt="" style="height:.6cm">` : ''}${txt(r.foot)}</p></div>`;
+  document.title = r.name;
+  document.documentElement.lang = S.lang === 'zh' ? 'zh-CN' : S.lang;
+  renderBar(langs);
+}
+function renderBar(langs) {
+  let h = '';
+  if (PAY.docs.length > 1) {
+    h += '<select id="b-doc" title="ເອກະສານ">' + PAY.docs.map((d, i) => {
+      const m = resolve(d.data.meta || {}, S.lang);
+      return `<option value="${i}"${i === S.doc ? ' selected' : ''}>${esc((i + 1) + '. ' + (m.title || m.subject || d.name))}</option>`;
+    }).join('') + '</select>';
+  }
+  (langs.length ? langs : [S.lang]).forEach(l => {
+    h += `<button data-lang="${l}"${l === S.lang ? ' class="on"' : ''}>${LABELS[l].name_lang}</button>`;
+  });
+  const st = curStatus();
+  h += `<select id="b-status" title="ສະຖານະ"><option value="draft"${st === 'draft' ? ' selected' : ''}>ສະບັບຮ່າງ (Draft)</option>` +
+       `<option value="final"${st === 'final' ? ' selected' : ''}>ສະບັບສົມບູນ (Final)</option></select>`;
+  h += '<span class="gap"></span><button class="go" id="b-pdf">Export PDF</button><button class="go" id="b-word">Export Word</button>';
+  h += '<span class="hint">PDF: ເລືອກ "Save as PDF", ເຈ້ຍ A4, ປິດ "Headers and footers", ເປີດ "Background graphics" (ໃຊ້ Chrome ຫຼື Edge). ' +
+       'Word: ໄດ້ໄຟລ໌ .doc ທີ່ເປີດແກ້ໄຂໃນ Microsoft Word ໄດ້ ແລ້ວ Save As ເປັນ .docx.</span>';
+  bar.innerHTML = h;
+}
+bar.addEventListener('change', e => {
+  if (e.target.id === 'b-doc') { S.doc = +e.target.value; render(); window.scrollTo(0, 0); }
+  if (e.target.id === 'b-status') { S.status[S.doc] = e.target.value; render(); }
+});
+bar.addEventListener('click', e => {
+  const l = e.target.getAttribute && e.target.getAttribute('data-lang');
+  if (l) { S.lang = l; render(); }
+  if (e.target.id === 'b-pdf') window.print();
+  if (e.target.id === 'b-word') exportWord();
+});
+
+// ---------------------------------------------------------------- Word export (single-file web page, opens in Word)
+function b64utf8(s) {
+  const u = new TextEncoder().encode(s);
+  let bin = '';
+  for (let i = 0; i < u.length; i += 0x8000) bin += String.fromCharCode.apply(null, u.subarray(i, i + 0x8000));
+  return btoa(bin);
+}
+const wrap76 = s => s.replace(/(.{76})/g, '$1\r\n');
+function field(code) {
+  return `<!--[if supportFields]><span style='mso-element:field-begin'></span> ${code} <span style='mso-element:field-separator'></span><![endif]-->1` +
+         `<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->`;
+}
+function exportWord() {
+  const lang = S.lang, L = LABELS[lang];
+  const r = build(curDoc().data, lang, curStatus(), true);
+  const files = [], seen = {};
+  const swap = (html, prefix) => html.replace(/src="(data:([\w\/+.-]+);base64,([^"]+))"/g, (all, uri, mime, b64) => {
+    if (!seen[uri]) {
+      const ext = (mime.split('/')[1] || 'png').replace('jpeg', 'jpg').replace('+xml', '');
+      seen[uri] = 'image' + (files.length + 1) + '.' + ext;
+      files.push({name: seen[uri], mime: mime, b64: b64});
+    }
+    return 'src="' + prefix + seen[uri] + '"';
+  });
+  const css = docCss(lang) + `
+@page WordSection1{size:595.3pt 841.9pt;margin:2.5cm 2.0cm 2.0cm 2.5cm;mso-header-margin:.8cm;mso-footer-margin:.8cm;` +
+    `mso-header:url("doc_files/header.htm") h1;mso-footer:url("doc_files/header.htm") f1;mso-paper-source:0}
+div.WordSection1{page:WordSection1}`;
+  const head = `<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>${esc(r.title)}</title>
+<link rel="File-List" href="FILELIST">
+<!--[if gte mso 9]><xml><w:WordDocument><w:View>Print</w:View><w:Zoom>100</w:Zoom><w:DoNotOptimizeForBrowser/></w:WordDocument></xml><![endif]-->
+<style>${css}</style></head>`;
+  const sym = PAY.logos.symbol;
+  const symImg = sym ? `<img src="${sym}" width="${Math.round(0.6 * CM * (DIM[sym] ? DIM[sym].w / DIM[sym].h : 1))}" height="${Math.round(0.6 * CM)}">&nbsp;&nbsp;` : '';
+  const footer = `<table class="lay" width="100%" cellspacing="0" cellpadding="0" style="width:100%"><tr>` +
+    `<td class="ft" width="75%">${symImg}${txt(r.foot)}</td>` +
+    `<td class="ft" width="25%" style="text-align:right">${esc(L.pg[0])}${field('PAGE')}${esc(L.pg[1])}${field('NUMPAGES')}${esc(L.pg[2])}</td></tr></table>`;
+  const main = head.replace('FILELIST', 'doc_files/filelist.xml') +
+    `<body><div class="WordSection1">${swap(r.body, 'doc_files/')}</div></body></html>`;
+  const hdr = head.replace('FILELIST', 'filelist.xml') +
+    `<body><div style="mso-element:header" id="h1">${swap(r.head, '')}<p class="sp">&nbsp;</p></div>` +
+    `<div style="mso-element:footer" id="f1">${swap(footer, '')}</div></body></html>`;
+  const filelist = '<xml xmlns:o="urn:schemas-microsoft-com:office:office"><o:MainFile HRef="../doc.htm"/><o:File HRef="header.htm"/>' +
+    files.map(f => `<o:File HRef="${f.name}"/>`).join('') + '<o:File HRef="filelist.xml"/></xml>';
+
+  const BND = '----=_DSV_NextPart_01';
+  const ROOT = 'file:///C:/dsv/';
+  const part = (loc, type, b64) => `--${BND}\r\nContent-Location: ${loc}\r\nContent-Transfer-Encoding: base64\r\nContent-Type: ${type}\r\n\r\n${wrap76(b64)}\r\n\r\n`;
+  let mht = `MIME-Version: 1.0\r\nContent-Type: multipart/related; boundary="${BND}"; type="text/html"\r\n\r\n`;
+  mht += part(ROOT + 'doc.htm', 'text/html; charset="utf-8"', b64utf8(main));
+  mht += part(ROOT + 'doc_files/header.htm', 'text/html; charset="utf-8"', b64utf8(hdr));
+  files.forEach(f => { mht += part(ROOT + 'doc_files/' + f.name, f.mime, f.b64); });
+  mht += part(ROOT + 'doc_files/filelist.xml', 'text/xml; charset="utf-8"', b64utf8(filelist));
+  mht += `--${BND}--\r\n`;
+
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([mht], {type: 'application/msword'}));
+  a.download = r.name + '.doc';
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+}
+window.DSV = {build: build, exportWord: exportWord, state: S, render: render};
+
+// ---------------------------------------------------------------- start: measure embedded images, then draw
+const uris = new Set(Object.values(PAY.logos).filter(Boolean));
+PAY.docs.forEach(d => walk(d.data, o => { if (o.type === 'image' && o.src) uris.add(o.src); }));
+Promise.all(Array.from(uris).map(u => new Promise(done => {
+  const im = new Image();
+  im.onload = () => { DIM[u] = {w: im.naturalWidth || 1, h: im.naturalHeight || 1}; done(); };
+  im.onerror = () => done();
+  im.src = u;
+}))).then(render);
+})();
+</script>
+</body>
+</html>

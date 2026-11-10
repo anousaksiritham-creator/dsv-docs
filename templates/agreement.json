@@ -1,0 +1,46 @@
+{
+ "meta": {
+  "type": "agreement",
+  "code": "FERRY-2026",
+  "kind": "Terms of Agreement",
+  "status": "draft",
+  "date": "2026-11-10",
+  "title": {"lo": "ເງື່ອນໄຂຂໍ້ຕົກລົງ – ການສະໜັບສະໜູນທຶນເຮືອຂ້າມຟາກ", "en": "Terms of Agreement – Ferry Funding", "zh": "协议条款——渡轮出资"},
+  "subtitle": {"lo": "ລະຫວ່າງ ແດນສະຫວັນ (DSV) ແລະ ທ່າເຮືອ", "en": "between Dansavanh (DSV) and the Port", "zh": "丹沙湾（DSV）与港方之间"},
+  "info": [
+   [{"lo": "ຝ່າຍທີ 1", "en": "Party 1", "zh": "甲方"}, {"lo": "ແດນສະຫວັນ (DSV)", "en": "Dansavanh (DSV)", "zh": "丹沙湾（DSV）"}],
+   [{"lo": "ຝ່າຍທີ 2", "en": "Party 2", "zh": "乙方"}, {"lo": "ທ່າເຮືອ ...", "en": "... Port", "zh": "……港方"}],
+   [{"lo": "ວັນທີ", "en": "Date", "zh": "日期"}, "2026-11-10"],
+   [{"lo": "ໄລຍະສັນຍາ", "en": "Term", "zh": "期限"}, {"lo": "5 ປີ", "en": "5 years", "zh": "5年"}]
+  ],
+  "parties": [
+   {"title": "DSV", "name": "", "position": ""},
+   {"title": {"lo": "ທ່າເຮືອ", "en": "The port", "zh": "港方"}, "name": "", "position": ""}
+  ]
+ },
+ "sections": [
+  {"title": {"lo": "ຂອບເຂດ", "en": "Scope", "zh": "范围"}, "blocks": [
+   {"type": "p", "text": {"lo": "ຂໍ້ຕົກລົງນີ້ກຳນົດ ...", "en": "This agreement sets out ...", "zh": "本协议规定……"}}
+  ]},
+  {"title": {"lo": "ພັນທະຂອງແຕ່ລະຝ່າຍ", "en": "Obligations of the parties", "zh": "双方义务"}, "blocks": [
+   {"type": "numbered", "items": [
+    ["2.1", {"lo": "ຝ່າຍທີ 1 ...", "en": "Party 1 shall ...", "zh": "甲方应……"}],
+    ["2.2", {"lo": "ຝ່າຍທີ 2 ...", "en": "Party 2 shall ...", "zh": "乙方应……"}]
+   ]}
+  ]},
+  {"title": {"lo": "ການຈ່າຍເງິນ", "en": "Payment", "zh": "付款"}, "blocks": [
+   {"type": "table",
+    "columns": [{"lo": "ງວດ", "en": "Installment", "zh": "期数"}, {"lo": "ເງື່ອນໄຂ", "en": "Condition", "zh": "条件"}, {"lo": "ຈຳນວນ (ບາດ)", "en": "Amount (baht)", "zh": "金额（泰铢）"}],
+    "widths": [2.5, 10, 4],
+    "align": ["c", "l", "r"],
+    "rows": [["1", {"lo": "ເຊັນສັນຍາ", "en": "Signing", "zh": "签约"}, "150,000"],
+             ["2", {"lo": "ໂຄງເຮືອສຳເລັດ", "en": "Hull complete", "zh": "船体完工"}, "200,000"],
+             ["3", {"lo": "ສົ່ງມອບ", "en": "Delivery", "zh": "交付"}, "150,000"],
+             ["", {"lo": "ລວມ", "en": "Total", "zh": "合计"}, "500,000"]],
+    "total_row": true}
+  ]},
+  {"title": {"lo": "ເອກະສານອ້າງອີງ", "en": "Reference documents", "zh": "参考文件"}, "annex": true, "blocks": [
+   {"type": "bullets", "items": [{"lo": "ບົດລາຍງານເງື່ອນໄຂການສະໜັບສະໜູນທຶນ (DSV / FERRY-2026)", "en": "Funding Conditions Report (DSV / FERRY-2026)", "zh": "出资条件报告（DSV / FERRY-2026）"}]}
+  ]}
+ ]
+}
